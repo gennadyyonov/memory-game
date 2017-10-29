@@ -1,3 +1,13 @@
+const RULES = "<strong>The rules for playing Memory Game</strong>\n" +
+    "        <ul>\n" +
+    "            <li>Cards are mixed up and laid in rows, face down.</li>\n" +
+    "            <li>Turn over any two cards.</li>\n" +
+    "            <li>If the two cards match, keep them.</li>\n" +
+    "            <li>If they don't match, turn them back over.</li>\n" +
+    "            <li>Remember what was on each card and where it was.</li>\n" +
+    "            <li>The game is over either when all the cards have been matched or number of attempts exceeded.</li>\n" +
+    "        </ul>";
+
 Round = {
     ROUND_1 : { number : 1, pairs : 4, numberOfCardsPerRow : 3, maxNumberOfAttempts : 10, previewTimeInSec : 2 },
     ROUND_2 : { number : 2, pairs : 6, numberOfCardsPerRow : 4, maxNumberOfAttempts : 20, previewTimeInSec : 3 },
@@ -315,6 +325,8 @@ function initBoard(board) {
 
 $(document).ready(
     function () {
+        var rules = $('#rules');
+        rules.html(RULES);
         statusBar = $('#statusBar');
         options = {statusBar : statusBar, round : Round.ROUND_1, preview : true};
         var board = new Board(options);
