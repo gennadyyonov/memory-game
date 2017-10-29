@@ -1,0 +1,13 @@
+body {
+    background-color: darkgreen;
+}
+
+.card-cell > img {
+    height: 150px;
+    border-radius: 10px;
+}
+
+.button {
+    background-color: #4F8A10;
+    margin: 4px 2px;
+}

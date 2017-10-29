@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="css/memory_game.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/cards.js"></script>
+    <script src="js/memory_game.js"></script>
+</head>
+<body>
+
+<div>
+    <div id="statusBar" class="warning"></div>
+    <div id="board"></div>
+    <div>
+        <button class="button shadow-button" onclick="nextRound()">Next Round</button>
+        <button class="button shadow-button" onclick="newGame()">New Game</button>
+    </div>
+    <div id="rules" class="info">
+        <strong>The rules for playing Memory Game</strong>
+        <ul>
+            <li>Cards are mixed up and laid in rows, face down.</li>
+            <li>Turn over any two cards.</li>
+            <li>If the two cards match, keep them.</li>
+            <li>If they don't match, turn them back over.</li>
+            <li>Remember what was on each card and where it was.</li>
+            <li>The game is over either when all the cards have been matched or number of attempts exceeded.</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

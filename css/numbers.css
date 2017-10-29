@@ -1,0 +1,30 @@
+.card-row {
+    height: 150px;
+    line-height: 150px;
+}
+
+.card-cell {
+    width: 100px;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    font-family: Verdana, serif;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.open {
+    background-color: darkorange;
+    transition: 500ms;
+}
+
+.close {
+    cursor: pointer;
+    background-color: cornflowerblue;
+    transition: 500ms;
+}
+
+.button {
+    background-color: cornflowerblue;
+    margin: 4px 10px;
+}
