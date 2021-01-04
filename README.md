@@ -146,5 +146,5 @@ az group delete -n $RESOURCE_GROUP
 
 - Remove deleted clusters context
 ```
-kubectl config delete-context aks-contoso-video
+kubectl config delete-context aks-memorygame
 ```
