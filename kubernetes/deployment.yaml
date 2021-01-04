@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: memorygame-website
+spec:
+  selector:
+    matchLabels:
+      app: memorygame-website
+  template:
+    metadata:
+      labels:
+        app: memorygame-website
+    spec:
+      containers:
+        - image: <acr_name>.azurecr.io/memorygame-website
+          name: memorygame-website
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 250m
+              memory: 256Mi
+          ports:
+            - containerPort: 80
+              name: http
