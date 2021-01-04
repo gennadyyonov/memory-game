@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: memorygame-website
+  annotations:
+    kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+  rules:
+    - host: memorygame.<uuid>.<region>.aksapp.io
+      http:
+        paths:
+          - backend:
+              serviceName: memorygame-website
+              servicePort: http
+            path: /
