@@ -68,7 +68,6 @@ az aks update \
 ```
 git clone https://github.com/gennadyyonov/memory-game.git
 cd memory-game
-git checkout aks-deploy-container-app
 ```
 
 - Build and push the container image
@@ -137,3 +136,15 @@ az network dns record-set list -g <resource-group> -z <zone-name> --output table
 - Use `Fqdn` column value to compose application URL(s) and open them in browser
     - `http://memorygame.<uid>.<region>.aksapp.io./numbers.html`
     - `http://memorygame.<uid>.<region>.aksapp.io./cards.html`
+    
+## Clean up resources
+
+- Delete resource group
+```
+az group delete -n $RESOURCE_GROUP
+```
+
+- Remove deleted clusters context
+```
+kubectl config delete-context aks-contoso-video
+```
